@@ -13,7 +13,22 @@ module instruction_memory
     
     always_ff @(negedge clk) begin
         if (rst) begin
-            for (int i=0; i < MEM_SIZE; i=i+1) begin
+            // Initial instructions -- This is only for simulation
+            // --------------------------------------------------------
+            mem_reg[0] <= 8'hff;
+            mem_reg[1] <= 8'hc4;
+            mem_reg[2] <= 8'ha3;
+            mem_reg[3] <= 8'h03;
+            mem_reg[4] <= 8'h00;
+            mem_reg[5] <= 8'h83;
+            mem_reg[6] <= 8'h23;
+            mem_reg[7] <= 8'h83;
+            mem_reg[8] <= 8'h00;
+            mem_reg[9] <= 8'h64;
+            mem_reg[10] <= 8'ha4;
+            mem_reg[11] <= 8'h23;
+            // --------------------------------------------------------
+            for (int i=12; i < MEM_SIZE; i=i+1) begin
                 mem_reg[i] <= 0;
             end
         end else begin
