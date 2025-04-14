@@ -1,12 +1,13 @@
 module instruction_memory
 #(
     parameter MEM_SIZE = 128,
-    parameter WORD_SIZE = 8
+    parameter WORD_SIZE = 8,
+    parameter WORD_SIZE_4 = 32
 )
 (
     input logic clk, rst,
     input logic [$clog2(MEM_SIZE)-1:0] addr,
-    output logic [WORD_SIZE-1:0]out_data
+    output logic [WORD_SIZE_4-1:0]out_data
 );
     logic [WORD_SIZE-1:0] mem_reg[0:MEM_SIZE-1];
     logic [WORD_SIZE-1:0] mem_next[0:MEM_SIZE-1];

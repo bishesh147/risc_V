@@ -16,7 +16,7 @@ module instruction_fetch(
     
     assign cnt_val_pl4 = cnt_val + 4;
 
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk or negedge clk) begin
         if (rst) begin
             instr_reg <= 0;
         end else begin

@@ -5,7 +5,7 @@ module program_counter(
 );
     logic [31:0] cnt_reg, cnt_next;
     
-    always_ff @(posedge clk) begin
+    always_ff @(negedge clk) begin
         if (rst) begin
             cnt_reg <= 0;
         end else begin
