@@ -24,5 +24,5 @@ module risc_v_top(
                            .reg1_data(reg1_data), .reg2_data(reg2_data), 
                            .write_back(write_back), .mem_wr(mem_wr), 
                            .mem_rd(mem_rd), .alu_src(alu_src), .alu_op(alu_op),
-                           .immediate(immediate), .cnt_val_pl4_out(cnt_val_pl4_out))
+                           .immediate(immediate), .cnt_val_pl4_out(cnt_val_pl4_out));
 endmodule

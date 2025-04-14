@@ -17,6 +17,7 @@ module instruction_decode(
 
     control ctr1(.clk(clk), .rst(rst), .opcode(instruction[6:0]),
                  .funct3(instruction[14:12]),
+                 .funct7(instruction[31:25]),
                  .write_back(write_back_wire), .mem_wr(mem_wr_wire),
                  .mem_rd(mem_rd_wire), .alu_src(alu_src_wire),
                  .alu_op(alu_op_wire));
